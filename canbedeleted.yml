@@ -10,11 +10,5 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
+- script: echo $(System.DefaultWorkingDirectory), $(Pipeline.Workspace)
   displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-  inputs:
-    echo: $(System.DefaultWorkingDirectory), $(Pipeline.Workspace)
-  displayName: 'Run a multi-line script'
